@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="GB2312"?>
+ <domain>
+  <model trigger="u_u">
+    <rule>
+      <case>
+        <condition>
+          <if var="u_u" relation="=" value="设置闹钟"/>
+        </condition>
+        <effect prob="1">
+          <set var="a_u" value="SetAlarm"/>
+        </effect>
+      </case>
+      <case>
+        <condition>
+          <if var="u_u" relation="=" value="明天早上六点的"/>
+        </condition>
+        <effect prob="1">
+          <set var="a_u" value="InformTime"/>
+        </effect>
+      </case>
+    </rule>
+  </model>
+  <model trigger="a_u">
+    <rule>
+      <case>
+        <condition>
+          <if var="a_u" relation="=" value="SetAlarm"/>
+        </condition>
+        <effect prob="1">
+          <set var="a_m" value="RequestTime"/>
+        </effect>
+      </case>
+      <case>
+        <condition>
+          <if var="a_u" relation="=" value="InformTime"/>
+        </condition>
+        <effect prob="1">
+          <set var="a_m" value="ToDoSetAlarm"/>
+        </effect>
+      </case>
+    </rule>
+  </model>
+  <model trigger="a_m">
+    <rule>
+      <case>
+        <condition>
+          <if var="a_m" relation="=" value="RequestTime"/>
+        </condition>
+        <effect prob="1">
+          <set var="u_m" value="请问您需要设置几点的闹钟？"/>
+        </effect>
+      </case>
+      <case>
+        <condition>
+          <if var="a_m" relation="=" value="ToDoSetAlarm"/>
+        </condition>
+        <effect prob="1">
+          <set var="u_m" value="好的，已经把闹钟设置到了明天早上六点"/>
+        </effect>
+      </case>
+    </rule>
+  </model>
+</domain>
