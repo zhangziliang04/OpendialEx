@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="opendial.inference.InferenceTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2018-03-07T08:22:24" hostname="B114742567009E5" time="0.165">
+  <properties/>
+  <testcase name="testSwitching" classname="opendial.inference.InferenceTest" time="0.049"/>
+  <testcase name="testNetwork1bis" classname="opendial.inference.InferenceTest" time="0.0"/>
+  <testcase name="testNetwork2bis" classname="opendial.inference.InferenceTest" time="0.0"/>
+  <testcase name="testNetwork3bis" classname="opendial.inference.InferenceTest" time="0.033"/>
+  <testcase name="testNetworkUtil" classname="opendial.inference.InferenceTest" time="0.08"/>
+  <testcase name="testNetwork1" classname="opendial.inference.InferenceTest" time="0.002"/>
+  <testcase name="testNetwork2" classname="opendial.inference.InferenceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

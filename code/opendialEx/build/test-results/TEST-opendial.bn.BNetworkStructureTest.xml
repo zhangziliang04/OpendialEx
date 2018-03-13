@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="opendial.bn.BNetworkStructureTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2018-03-07T08:22:11" hostname="B114742567009E5" time="0.132">
+  <properties/>
+  <testcase name="testBuildBasicNetwork" classname="opendial.bn.BNetworkStructureTest" time="0.067"/>
+  <testcase name="testCopy" classname="opendial.bn.BNetworkStructureTest" time="0.0"/>
+  <testcase name="testIdChance" classname="opendial.bn.BNetworkStructureTest" time="0.0"/>
+  <testcase name="testDefaultValue" classname="opendial.bn.BNetworkStructureTest" time="0.0"/>
+  <testcase name="testCliques" classname="opendial.bn.BNetworkStructureTest" time="0.031"/>
+  <testcase name="testRemoval" classname="opendial.bn.BNetworkStructureTest" time="0.001"/>
+  <testcase name="testStructure" classname="opendial.bn.BNetworkStructureTest" time="0.0"/>
+  <testcase name="testSortedNodes" classname="opendial.bn.BNetworkStructureTest" time="0.032"/>
+  <testcase name="tableExpansion" classname="opendial.bn.BNetworkStructureTest" time="0.001"/>
+  <testcase name="testCopyIdChange" classname="opendial.bn.BNetworkStructureTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

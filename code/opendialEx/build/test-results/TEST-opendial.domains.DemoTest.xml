@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="opendial.domains.DemoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-03-07T08:22:12" hostname="B114742567009E5" time="4.019">
+  <properties/>
+  <testcase name="testDemo" classname="opendial.domains.DemoTest" time="4.019"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

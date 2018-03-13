@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state>
+<variable id="carried">
+<value>[]</value>
+</variable>
+<variable id="u_m">
+<value>I do not see anything</value>
+</variable>
+<variable id="lastMove">
+<value>Move(Forward)</value>
+</variable>
+<variable id="a_u^p">
+<value prob="0.0593">Move(Left)</value>
+<value prob="0.0593">Move(Backward)</value>
+<value prob="0.0593">Move(Turn)</value>
+<value prob="0.0593">Move(Right)</value>
+<value prob="0.0593">Move(Left,Short)</value>
+<value prob="0.0593">Move(Forward,Short)</value>
+<value prob="0.0593">Move(Backward,Short)</value>
+<value prob="0.0593">Move(Right,Short)</value>
+<value prob="0.0584">WhatDoYouSee</value>
+<value prob="0.0395">Move(Forward)</value>
+<value prob="0.0292">DoYouSee(BlueObj)</value>
+<value prob="0.0292">DoYouSee(RedObj)</value>
+<value prob="0.0273">PickUp(AtFeet)</value>
+<value prob="0.0198">RepeatLast</value>
+</variable>
+<variable id="u_u">
+<value prob="0.8559">what do you see</value>
+<value prob="0.107">do you see it</value>
+</variable>
+<variable id="a_m">
+<value>Describe([])</value>
+</variable>
+<variable id="completed-task">
+<value>true</value>
+</variable>
+<variable id="perceived">
+<value>[]</value>
+</variable>
+<variable id="a_u">
+<value prob="0.9629">WhatDoYouSee</value>
+</variable>
+<variable id="aha_conti">
+<distrib type="uniform">
+<min>-2</min>
+<max>-2</max>
+</distrib>
+</variable>
+<variable id="aha">
+<value prob="0.7">ohoho</value>
+</variable>
+<variable id="last(a_m)">
+<value>Describe([])</value>
+</variable>
+<variable id="i_u">
+<value prob="0.0659">Move(Left)</value>
+<value prob="0.0659">Move(Backward)</value>
+<value prob="0.0659">Move(Turn)</value>
+<value prob="0.0659">Move(Right)</value>
+<value prob="0.0659">Move(Left,Short)</value>
+<value prob="0.0659">Move(Forward)</value>
+<value prob="0.0659">Move(Forward,Short)</value>
+<value prob="0.0659">Move(Backward,Short)</value>
+<value prob="0.0659">Move(Right,Short)</value>
+<value prob="0.0649">WhatDoYouSee</value>
+<value prob="0.0324">DoYouSee(BlueObj)</value>
+<value prob="0.0324">DoYouSee(RedObj)</value>
+<value prob="0.0304">PickUp(AtFeet)</value>
+</variable>
+</state>

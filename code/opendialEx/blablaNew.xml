@@ -1,0 +1,1 @@
+<domain><model trigger="u_u"><rule><case><condition><if var="u_u" value="input"/></condition><effect><set var="u_m" value="output"/></effect></case></rule></model></domain>

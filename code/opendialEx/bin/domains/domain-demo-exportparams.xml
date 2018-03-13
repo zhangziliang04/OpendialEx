@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameters>
+<variable id="theta_1">
+<distrib type="gaussian">
+<mean>15.5678</mean>
+<variance>21.6974</variance>
+</distrib>
+</variable>
+<variable id="theta_2">
+<distrib type="gaussian">
+<mean>3.4772</mean>
+<variance>65.305</variance>
+</distrib>
+</variable>
+<variable id="theta_3">
+<distrib type="gaussian">
+<mean>4.1111</mean>
+<variance>66.1679</variance>
+</distrib>
+</variable>
+<variable id="theta_4">
+<distrib type="gaussian">
+<mean>21.4115</mean>
+<variance>174.7509</variance>
+</distrib>
+</variable>
+<variable id="theta_5">
+<distrib type="gaussian">
+<mean>9.2922</mean>
+<variance>65.3466</variance>
+</distrib>
+</variable>
+<variable id="theta_bloblo">
+<distrib type="dirichlet">
+<alpha>1.0</alpha>
+<alpha>3.0</alpha>
+</distrib>
+</variable>
+<variable id="theta_blabla">
+<distrib type="uniform">
+<min>-1</min>
+<max>2</max>
+</distrib>
+</variable>
+</parameters>

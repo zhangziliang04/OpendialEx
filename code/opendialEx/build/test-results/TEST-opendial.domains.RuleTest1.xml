@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="opendial.domains.RuleTest1" tests="7" skipped="0" failures="0" errors="0" timestamp="2018-03-07T08:22:20" hostname="B114742567009E5" time="0.789">
+  <properties/>
+  <testcase name="test1" classname="opendial.domains.RuleTest1" time="0.081"/>
+  <testcase name="test2" classname="opendial.domains.RuleTest1" time="0.079"/>
+  <testcase name="test3" classname="opendial.domains.RuleTest1" time="0.196"/>
+  <testcase name="test4" classname="opendial.domains.RuleTest1" time="0.065"/>
+  <testcase name="test5" classname="opendial.domains.RuleTest1" time="0.08"/>
+  <testcase name="test6" classname="opendial.domains.RuleTest1" time="0.164"/>
+  <testcase name="test7" classname="opendial.domains.RuleTest1" time="0.124"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

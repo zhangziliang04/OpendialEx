@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="opendial.domains.RefResolution" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-03-07T08:22:19" hostname="B114742567009E5" time="0.875">
+  <properties/>
+  <testcase name="underspecTest1" classname="opendial.domains.RefResolution" time="0.064"/>
+  <testcase name="resolutionTest" classname="opendial.domains.RefResolution" time="0.284"/>
+  <testcase name="nluTest" classname="opendial.domains.RefResolution" time="0.527"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

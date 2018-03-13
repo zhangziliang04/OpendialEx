@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="opendial.modules.ImporterTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-03-07T08:22:27" hostname="B114742567009E5" time="3.94">
+  <properties/>
+  <testcase name="testImporter" classname="opendial.modules.ImporterTest" time="0.381"/>
+  <testcase name="testImporter2" classname="opendial.modules.ImporterTest" time="0.677"/>
+  <testcase name="testImporter3" classname="opendial.modules.ImporterTest" time="0.938"/>
+  <testcase name="testImporter4" classname="opendial.modules.ImporterTest" time="1.944"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[OpenDial] 信息: Module ForwardPlanner successfully attached 
+[OpenDial] 信息: Module WizardLearner successfully attached 
+[OpenDial] 信息: Module ForwardPlanner successfully attached 
+[OpenDial] 信息: Module WizardLearner successfully attached 
+]]></system-err>
+</testsuite>

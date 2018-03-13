@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="opendial.inference.InferenceLargeScaleTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-03-07T08:22:23" hostname="B114742567009E5" time="1.082">
+  <properties/>
+  <testcase name="testNetwork" classname="opendial.inference.InferenceLargeScaleTest" time="1.082"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[OpenDial] 信息: Average time for naive inference: 0.3727316706586826 ms. 
+[OpenDial] 信息: Average time for variable elimination: 0.21719830538922155 ms. 
+[OpenDial] 信息: Average time for importance sampling: 3.9152557365269463 ms. (with 0% of repeats) 
+]]></system-err>
+</testsuite>

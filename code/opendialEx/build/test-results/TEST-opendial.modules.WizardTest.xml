@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="opendial.modules.WizardTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-03-07T03:30:08" hostname="B114742567009E5" time="1.912">
+  <properties/>
+  <testcase name="testWizardLearning" classname="opendial.modules.WizardTest" time="1.024"/>
+  <testcase name="testWizardControl" classname="opendial.modules.WizardTest" time="0.888"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[OpenDial] 信息: Module WizardLearner successfully attached 
+[OpenDial] 信息: Reward: 10 
+[OpenDial] 信息: Module WizardControl successfully attached 
+]]></system-err>
+</testsuite>

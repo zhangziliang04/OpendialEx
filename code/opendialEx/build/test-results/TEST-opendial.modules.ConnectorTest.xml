@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="opendial.modules.ConnectorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-03-07T08:22:24" hostname="B114742567009E5" time="0.643">
+  <properties/>
+  <testcase name="remoteConnection" classname="opendial.modules.ConnectorTest" time="0.643"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[OpenDial] 信息: Connected to 172.24.148.33:50255 
+[OpenDial] 信息: Connected to 172.24.148.33:50256 
+]]></system-err>
+</testsuite>

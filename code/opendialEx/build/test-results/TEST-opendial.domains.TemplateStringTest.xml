@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="opendial.domains.TemplateStringTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2018-03-07T08:22:22" hostname="B114742567009E5" time="0.08">
+  <properties/>
+  <testcase name="oneCharAndParenthesisTest" classname="opendial.domains.TemplateStringTest" time="0.0"/>
+  <testcase name="testTemplate1" classname="opendial.domains.TemplateStringTest" time="0.0"/>
+  <testcase name="testTemplate2" classname="opendial.domains.TemplateStringTest" time="0.0"/>
+  <testcase name="testTemplate3" classname="opendial.domains.TemplateStringTest" time="0.0"/>
+  <testcase name="testTemplate4" classname="opendial.domains.TemplateStringTest" time="0.0"/>
+  <testcase name="testTemplate5" classname="opendial.domains.TemplateStringTest" time="0.0"/>
+  <testcase name="testTemplate6" classname="opendial.domains.TemplateStringTest" time="0.0"/>
+  <testcase name="testTemplate7" classname="opendial.domains.TemplateStringTest" time="0.0"/>
+  <testcase name="testTemplate8" classname="opendial.domains.TemplateStringTest" time="0.0"/>
+  <testcase name="testStar" classname="opendial.domains.TemplateStringTest" time="0.0"/>
+  <testcase name="ComplexRegex" classname="opendial.domains.TemplateStringTest" time="0.0"/>
+  <testcase name="testTemplateMath" classname="opendial.domains.TemplateStringTest" time="0.0"/>
+  <testcase name="testMatchInString" classname="opendial.domains.TemplateStringTest" time="0.0"/>
+  <testcase name="realFunctionTest" classname="opendial.domains.TemplateStringTest" time="0.0"/>
+  <testcase name="testDouble" classname="opendial.domains.TemplateStringTest" time="0.0"/>
+  <testcase name="testTemplateQuick" classname="opendial.domains.TemplateStringTest" time="0.079"/>
+  <testcase name="functionsTest" classname="opendial.domains.TemplateStringTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

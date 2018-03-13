@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="opendial.modules.RecordingTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-03-07T08:22:32" hostname="B114742567009E5" time="1.729">
+  <properties/>
+  <testcase name="testXML" classname="opendial.modules.RecordingTest" time="0.553"/>
+  <testcase name="testRecord" classname="opendial.modules.RecordingTest" time="1.176"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[OpenDial] 信息: Module WizardLearner successfully attached 
+]]></system-err>
+</testsuite>

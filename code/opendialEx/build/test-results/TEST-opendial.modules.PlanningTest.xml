@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="opendial.modules.PlanningTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-03-07T08:22:31" hostname="B114742567009E5" time="0.193">
+  <properties/>
+  <testcase name="testPlanning" classname="opendial.modules.PlanningTest" time="0.064"/>
+  <testcase name="testPlanning2" classname="opendial.modules.PlanningTest" time="0.0"/>
+  <testcase name="testPlanning3" classname="opendial.modules.PlanningTest" time="0.016"/>
+  <testcase name="testPlanning4" classname="opendial.modules.PlanningTest" time="0.063"/>
+  <testcase name="testPlanning5" classname="opendial.modules.PlanningTest" time="0.05"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

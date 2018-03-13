@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="opendial.bn.DistributionsTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2018-03-07T08:22:11" hostname="B114742567009E5" time="0.517">
+  <properties/>
+  <testcase name="testKernelDistrib" classname="opendial.bn.DistributionsTest" time="0.081"/>
+  <testcase name="testKernelDistrib2" classname="opendial.bn.DistributionsTest" time="0.0"/>
+  <testcase name="testMaths" classname="opendial.bn.DistributionsTest" time="0.0"/>
+  <testcase name="empiricalDistribContinuous" classname="opendial.bn.DistributionsTest" time="0.082"/>
+  <testcase name="testGaussian" classname="opendial.bn.DistributionsTest" time="0.065"/>
+  <testcase name="testGaussianDistrib" classname="opendial.bn.DistributionsTest" time="0.001"/>
+  <testcase name="testUniformDistrib" classname="opendial.bn.DistributionsTest" time="0.0"/>
+  <testcase name="testContinuous" classname="opendial.bn.DistributionsTest" time="0.0"/>
+  <testcase name="testDirichlet" classname="opendial.bn.DistributionsTest" time="0.129"/>
+  <testcase name="testDepEmpiricalDistribContinuous" classname="opendial.bn.DistributionsTest" time="0.111"/>
+  <testcase name="testConversion1Distrib" classname="opendial.bn.DistributionsTest" time="0.016"/>
+  <testcase name="nbestTest" classname="opendial.bn.DistributionsTest" time="0.0"/>
+  <testcase name="testDiscrete" classname="opendial.bn.DistributionsTest" time="0.0"/>
+  <testcase name="testSimpleDistrib" classname="opendial.bn.DistributionsTest" time="0.0"/>
+  <testcase name="testEmpiricalDistrib" classname="opendial.bn.DistributionsTest" time="0.015"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
