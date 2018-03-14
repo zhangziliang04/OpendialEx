@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="gb2312"?>
+<domain>
+	<!-- Natural language generation models. The domain can produce new system 
+		utterance either when the current step is changed, or when a new system action 
+		is selected. -->
+
+
+	<model trigger="current_step">
+		<!--Model producing new system utterances when the current step is moved 
+			to a new step. -->
+
+		<!-- Asks for the destination -->
+		<rule>
+			<case>
+				<condition>
+					<if var="current_step" value="Destination" />
+				</condition>
+				<effect util="1">
+					<set var="u_m" value="请问您要去那个城市？" />
+				</effect>
+			</case>
+		</rule>
+
+		<!-- Asks for the departure -->
+		<rule>
+			<case>
+				<condition>
+					<if var="current_step" value="Departure" />
+				</condition>
+				<effect util="1">
+					<set var="u_m" value="请问您打算从那个城市出发？" />
+				</effect>
+			</case>
+		</rule>
+
+		<!-- Asks for the flight date -->
+		<rule>
+			<case>
+				<condition>
+					<if var="current_step" value="Date" />
+				</condition>
+				<effect util="1">
+					<set var="u_m"
+						value="请问，您打算什么时候，前往目的地:{Destination}?" />
+				</effect>
+			</case>
+		</rule>
+
+		<!-- Asks whether to book a return trip -->
+		<rule>
+			<case>
+				<condition>
+					<if var="current_step" value="Return" />
+				</condition>
+				<effect util="1">
+					<set var="u_m" value="需要帮您预订返程的机票吗？" />
+				</effect>
+			</case>
+		</rule>
+
+		<!-- Asks for the return date -->
+		<rule>
+			<case>
+				<condition>
+					<if var="current_step" value="ReturnDate" />
+				</condition>
+				<effect util="1">
+					<set var="u_m"
+						value="您计划什么时候返回:{Departure}?" />
+				</effect>
+			</case>
+		</rule>
+
+		<!-- Asks for the number of tickets -->
+		<rule>
+			<case>
+				<condition>
+					<if var="current_step" value="NbTickets" />
+				</condition>
+				<effect util="1">
+					<set var="u_m" value="请问您需要预定几张机票？" />
+				</effect>
+			</case>
+		</rule>
+
+		<!-- Asks for the last confirmation -->
+		<rule>
+			<case>
+				<condition>
+					<if var="current_step" value="LastConfirm" />
+					<if var="ReturnDate" value="NoReturn" />
+					<if var="NbTickets" value="1"/>
+				</condition>
+				<effect util="1">
+					<set var="u_m"
+						value="You are ordering one one-way ticket from {Departure}
+					to {Destination} on {Date} for a total cost of {TotalCost} EUR. 
+					Shall I confirm your order?" />
+				</effect>
+			</case>
+			<case>
+				<condition>
+					<if var="current_step" value="LastConfirm" />
+					<if var="NbTickets" value="1"/>
+				</condition>
+				<effect util="1">
+					<set var="u_m"
+						value="您所预定的往返机票，从{Departure}
+					至{Destination} 出发日期：{Date} 返程日期：{ReturnDate} 总价：
+					{TotalCost} 元人民币.确认下单吗?" />
+				</effect>
+			</case>
+				<case>
+				<condition>
+					<if var="current_step" value="LastConfirm" />
+					<if var="ReturnDate" value="NoReturn" />
+				</condition>
+				<effect util="1">
+					<set var="u_m"
+						value="您已预定 {NbTickets}张单程机票，起飞自{Departure}
+					至{Destination} 于 {Date} 总价为{TotalCost}元人民币. 
+					确认下单吗?" />
+				</effect>
+			</case>
+			<case>
+				<condition>
+					<if var="current_step" value="LastConfirm" />
+				</condition>
+				<effect util="1">
+					<set var="u_m"
+						value="您已经预定 {NbTickets} 往返机票，自 {Departure}
+					至 {Destination} 于{Date} 并且 返程于 {ReturnDate} 总价： 
+					{TotalCost} 元人民币.确认下单吗?" />
+				</effect>
+			</case>
+		</rule>
+
+		<!-- Asks whether to order additional tickets -->
+		<rule>
+			<case>
+				<condition operator="or">
+					<if var="current_step" value="Final" />
+				</condition>
+				<effect util="1">
+					<set var="u_m" value="请问还有什么可以帮您的吗？" />
+				</effect>
+			</case>
+		</rule>
+
+		<!-- Closes the interaction -->
+		<rule>
+			<case>
+				<condition>
+					<if var="current_step" value="Close" />
+				</condition>
+				<effect util="1">
+					<set var="u_m" value="非常感谢您的支持，再见。" />
+				</effect>
+			</case>
+		</rule>
+
+
+	</model>
+
+
+	<model trigger="a_m">
+		<!-- Model producing new system utterances related to the last system action -->
+
+		<!-- grounding the destination -->
+		<rule>
+			<case>
+				<condition>
+					<if var="a_m" value="Ground(Destination,{Dest})" />
+				</condition>
+				<effect util="1">
+					<set var="u_m" value="好的，目的地：{Dest}." />
+				</effect>
+			</case>
+		</rule>
+
+		<!-- grounding the departure -->
+		<rule>
+			<case>
+				<condition>
+					<if var="a_m" value="Ground(Departure,{Depart})" />
+				</condition>
+				<effect util="1">
+					<set var="u_m" value="好的,出发自： {Depart}." />
+				</effect>
+			</case>
+		</rule>
+
+		<!-- grounding the flight date -->
+		<rule>
+			<case>
+				<condition>
+					<if var="a_m" value="Ground(Date,{Date})" />
+				</condition>
+				<effect util="1">
+					<set var="u_m"
+						value="好的,于{Date}，从{Departure}起飞，去往 {Destination}." />
+				</effect>
+			</case>
+		</rule>
+
+		<!-- grounding the number of tickets -->
+		<rule>
+			<case>
+				<condition>
+					<if var="a_m" value="Ground(NbTickets,{Number})" />
+				</condition>
+				<effect util="1">
+					<set var="u_m" value="好的, {Number} 张机票." />
+				</effect>
+			</case>
+		</rule>
+
+		<!-- grounding the return date -->
+		<rule>
+			<case>
+				<condition>
+					<if var="a_m" value="Ground(ReturnDate,NoReturn)" />
+				</condition>
+				<effect util="1">
+					<set var="u_m" value="好的, 没有返程." />
+				</effect>
+			</case>
+			<case>
+				<condition>
+					<if var="a_m" value="Ground(ReturnDate,{ReturnDate})" />
+				</condition>
+				<effect util="1">
+					<set var="u_m"
+						value="好的，于 {ReturnDate}自 {Destination} 飞往 {Departure} ." />
+				</effect>
+			</case>
+		</rule>
+
+		<!-- confirmation request for the destination -->
+		<rule>
+			<case>
+				<condition>
+					<if var="a_m" value="Confirm(Destination,{Dest})" />
+				</condition>
+				<effect util="1">
+					<set var="u_m" value="您打算飞往：{Dest}.是吗?" />
+				</effect>
+			</case>
+		</rule>
+
+		<!-- confirmation request for the departure -->
+		<rule>
+			<case>
+				<condition>
+					<if var="a_m" value="Confirm(Departure,{Depart})" />
+				</condition>
+				<effect util="1">
+					<set var="u_m" value="您计划从 {Depart}从发.是吗?" />
+				</effect>
+			</case>
+		</rule>
+
+		<!-- confirmation request for the flight date -->
+		<rule>
+			<case>
+				<condition>
+					<if var="a_m" value="Confirm(Date,{Date1})" />
+				</condition>
+				<effect util="1">
+					<set var="u_m"
+						value="您计划于{Date1}飞往 {Destination}. 是吗?" />
+				</effect>
+			</case>
+		</rule>
+
+		<!-- confirmation request for the return date -->
+		<rule>
+			<case>
+				<condition>
+					<if var="a_m" value="Confirm(ReturnDate,NoReturn)" />
+				</condition>
+				<effect util="1">
+					<set var="u_m" value="您打算预定返程机票吗?" />
+				</effect>
+			</case>
+			<case>
+				<condition>
+					<if var="a_m" value="Confirm(ReturnDate,{Date2})" />
+				</condition>
+				<effect util="1">
+					<set var="u_m"
+						value="您打算飞回于({Date2})返回({Departure})吗?" />
+				</effect>
+			</case>
+		</rule>
+
+		<!-- confirmation request for the number of tickets -->
+		<rule>
+			<case>
+				<condition>
+					<if var="a_m" value="Confirm(NbTickets,{Number})" />
+				</condition>
+				<effect util="1">
+					<set var="u_m" value="您打算预定{Number}张机票. 是吗?" />
+				</effect>
+			</case>
+		</rule>
+
+		<!-- repetition request -->
+		<rule>
+			<case>
+				<condition>
+					<if var="a_m" value="AskRepeat" />
+					<if var="current_step" value="(Destination|Departure)" />
+				</condition>
+				<effect util="1">
+					<set var="u_m"
+						value="抱歉！,请重复? 目前已开通的航线包括：北京,上海,天津,石家庄,济南,哈尔滨,重庆,
+								长春,沈阳,呼和浩特,乌鲁木齐,兰州,西宁,西安,银川,郑州,太原,合肥,长沙,昆明,武汉,南京,成都,贵阳,昆明,
+								拉萨,杭州,南昌,广州,福州,台北,海口,香港,澳门,南宁." />
+				</effect>
+			</case>
+			<case>
+				<condition>
+					<if var="a_m" value="AskRepeat" />
+					<if var="current_step" value="(Date|ReturnDate)" />
+				</condition>
+				<effect util="1">
+					<set var="u_m"
+						value="抱歉，请检查您机票的日期！" />
+				</effect>
+			</case>
+			<case>
+				<condition>
+					<if var="a_m-prev" value="AskRepeat" />
+					<if var="a_m" value="AskRepeat" />
+				</condition>
+				<effect util="1">
+					<set var="u_m"
+						value="抱歉，我没有听懂.您能够再说一次吗？" />
+				</effect>
+			</case>
+			<case>
+				<condition>
+					<if var="a_m" value="AskRepeat" />
+				</condition>
+				<effect util="1">
+					<set var="u_m" value="抱歉，您可以重复一次吗?" />
+				</effect>
+			</case>
+		</rule>
+
+		<!-- Making a price offer -->
+		<rule>
+			<case>
+				<condition>
+					<if var="a_m" value="MakeOffer({Price})" />
+					<if var="ReturnDate" value="NoReturn" />
+				</condition>
+				<effect util="1">
+					<set var="u_m"
+						value="单程机票：从 {Departure} 至 {Destination} 
+					于 {Date} 价格 {Price} 人民币 /人.需要我帮您预订吗?" />
+				</effect>
+			</case>
+			<case>
+				<condition>
+					<if var="a_m" value="MakeOffer({Price})" />
+				</condition>
+				<effect util="1">
+					<set var="u_m"
+						value="于{Date}从{Departure}出发至{Destination}，返程日期为：{ReturnDate}，当日票价为：{Price} 人民币/张.需要我帮您预订吗?" />
+				</effect>
+			</case>
+		</rule>
+
+		<!-- Grounding the cancellation -->
+		<rule>
+			<case>
+				<condition>
+					<if var="a_m" value="Ground(Cancel)" />
+				</condition>
+				<effect util="1">
+					<set var="u_m" value="好的，您的预定已经取消." />
+				</effect>
+			</case>
+		</rule>
+
+		<!-- Grounding the booking -->
+		<rule>
+			<case>
+				<condition>
+					<if var="a_m" value="Ground(Booking)" />
+				</condition>
+				<effect util="1">
+					<set var="u_m"
+						value="好的,您的机票已经完成预定,将会发送到您的邮箱." />
+				</effect>
+			</case>
+		</rule>
+
+		
+	</model>
+
+</domain>
