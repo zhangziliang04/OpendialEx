@@ -10,8 +10,6 @@
 - 5.高级建模
 ### 二、视频课程 ####
 
-[前往-》配套视频课程链接地址-》网易云课堂](http://study.163.com/course/courseMain.htm?courseId=1005049028&utm_campaign=commission&utm_source=cp-1016839500&utm_medium=share)
-
 - 2.1 航空订票机器人完整案例演示；
 - 2.2 声控机器人语料设计和案例演示；
 - 2.3 智能闹钟语料设计和案例演示；
